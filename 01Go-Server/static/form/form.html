@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Registration</div>
+      <form method="POST" action="/form">
+        <div class="user__details">
+          <div class="input__box">
+            <span class="details">Full Name</span>
+            <input
+              type="text"
+              name="name"
+              placeholder="E.g: John Smith"
+              required
+            />
+          </div>
+
+          <div class="input__box">
+            <span class="details">Email</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="johnsmith@hotmail.com"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="button">
+          <input type="submit" value="submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

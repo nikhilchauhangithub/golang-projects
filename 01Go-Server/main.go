@@ -12,7 +12,7 @@ func formHandler(w http.ResponseWriter, r *http.Request)  {
 		fmt.Fprintf(w,"Parseform err: %v", err)
 		return
 	}
-	fmt.Fprintf(w, "POST request successful")
+	fmt.Fprintln(w, "POST request successful")
 	name:= r.FormValue("name")
 	email:= r.FormValue("email")
 	fmt.Fprintf(w, "Name= %s\n", name)
@@ -50,3 +50,5 @@ func main() {
 
 
 }
+
+//the values are retrieved from the request body of the HTTP POST request, which is parsed and stored in the r.Form map by the http.Request struct's ParseForm() method.

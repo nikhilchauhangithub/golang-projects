@@ -31,3 +31,15 @@ func GetAllBooks() []Book{
 	db.Find(&Books)
 	return Books
 }
+
+func GetBookById(Id int64) (*Book, *gorm.DB){
+	var getBook Book
+	db:=db.Where("ID=?", Id).Find(&getBook)
+	return &getBook, db
+}
+
+func DeleteBook(Id int64) Book{
+	var book Book
+	db.Where("Id=?", Id).Delete(book)
+	return book
+}

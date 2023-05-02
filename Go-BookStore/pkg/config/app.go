@@ -1,6 +1,8 @@
 package config
 
 import (
+	"log"
+
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -10,11 +12,11 @@ var (
 )
 
 func Connect()  {
-	dsn := "nikhil:nikhil@123@/simplerest?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "nikhilchauhan:17147714@nN#@/simplerest?charset=utf8&parseTime=True&loc=Local"
 	 
 	d,err:=gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err!=nil {
-		panic(err)
+		log.Fatal(err)
 	}
 	 db = d
 }
